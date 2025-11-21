@@ -5,7 +5,10 @@ WORKDIR /workspace
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    ...
+    git \
+    curl \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
 
 
 # install python deps
